@@ -10,7 +10,7 @@
 <link rel="icon" href="icons/icon.svg?v=9598a3cf" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png?v=c6aef258" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png?v=6c1a0ae7">
-<link rel="stylesheet" href="app.css?v=a57f32aa">
+<link rel="stylesheet" href="app.css?v=b1aef9c3">
 <link rel="stylesheet" href="gate.css?v=6bd24bb6">
 <script>document.documentElement.classList.add('ia-guest');</script>
 </head>
@@ -31,10 +31,10 @@
   </header>
 
   <nav class="bar" aria-label="Controls">
-    <div class="grp"><label class="lab" for="yfrom">Years</label><select class="yr" id="yfrom" aria-label="First year"></select><span class="to">to</span><select class="yr" id="yto" aria-label="Last year"></select></div>
-    <div class="grp"><span class="seg" id="ypreset" role="group" aria-label="Quick year ranges"><button type="button" data-n="1">Latest</button><button type="button" data-n="5">5 yrs</button><button type="button" data-n="0">All</button></span></div>
+    <div class="grp yrs"><label class="lab" for="yfrom">Years</label><select class="yr" id="yfrom" aria-label="First year"></select><span class="to">to</span><select class="yr" id="yto" aria-label="Last year"></select></div>
+    <div class="grp yrs"><span class="seg" id="ypreset" role="group" aria-label="Quick year ranges"><button type="button" data-n="1">Latest</button><button type="button" data-n="5">5 yrs</button><button type="button" data-n="0">All</button></span></div>
     <div class="grp"><span class="lab">Currency</span><span class="seg" id="cur" role="group" aria-label="Currency"><button type="button" data-c="EUR">€</button><button type="button" data-c="USD">US$</button></span></div>
-    <div class="grp"><label class="lab" for="dsel">Donor</label><select id="dsel"></select></div>
+    <div class="grp donor"><label class="lab" for="dsel">Donor</label><select id="dsel"></select></div>
     <nav class="jump" id="themes" aria-label="Themes"><a href="#landing">Home</a><a href="#aid">Aid</a><a href="#trade">Trade</a><a href="#ireland">Ireland</a><a href="#census">Census</a><a href="#indicators">Indicators</a><a href="#reports">Reports &amp; news</a><a href="#about">About</a></nav>
   </nav>
   <p class="dnote" id="dnote" hidden>Showing <b id="dnote-n"></b> only. <button type="button" id="dnote-x">Show all donors</button></p>
@@ -191,7 +191,7 @@
     <summary><span class="st">Census 2022</span><span class="sd">Liberia's people by county and district, from the 2022 National Population and Housing Census</span></summary>
     <div class="tiles" id="cen-tiles"></div>
     <div class="card">
-      <div class="maphead"><h2 id="cen-h">Census by county</h2><div class="mapctl"><span class="lab">Show</span><select id="cen-m" data-seg aria-label="Census measure"></select><span class="seg" id="cen-lv" role="group" aria-label="Map level"><button type="button" data-l="c">Counties</button><button type="button" data-l="d">Districts</button></span></div></div>
+      <div class="maphead"><h2 id="cen-h">Census by county</h2><div class="mapctl"><span class="lab">Show</span><select id="cen-m" data-seg data-seg-max="60" aria-label="Census measure"></select><span class="seg" id="cen-lv" role="group" aria-label="Map level"><button type="button" data-l="c">Counties</button><button type="button" data-l="d">Districts</button></span></div></div>
       <p class="note" id="cen-note"></p>
       <div class="mapwrap"><div class="chart map" id="cen-map"></div><div class="mappanel" id="cen-panel"></div></div>
       <div class="legend scale" id="cen-scale"></div>
@@ -302,7 +302,7 @@
 <script src="mapview.js?v=f4ac3151"></script>
 <script src="segsel.js?v=3618e710"></script>
 <script src="trade.js?v=7737a81b"></script>
-<script src="themes.js?v=8487cfd5"></script>
+<script src="themes.js?v=b6b2f83e"></script>
 <script src="devind.js?v=87c1b1c8"></script>
 <script src="relay.js?v=4a9d66c1"></script>
 <script src="news.js?v=05245467"></script>

@@ -28,6 +28,11 @@
         if (el) el.classList.toggle('theme-off', THEMES[theme].indexOf(id) < 0);
       })();
     });
+    var bar = document.querySelector('.bar');
+    if (bar) {
+      bar.classList.toggle('hide-yrs', theme !== 'aid' && theme !== 'ireland');
+      bar.classList.toggle('hide-donor', theme !== 'aid');
+    }
     document.querySelectorAll('#themes a').forEach(function (a) {
       if (a.getAttribute('href') === '#' + theme) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');

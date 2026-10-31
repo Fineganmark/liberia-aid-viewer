@@ -331,3 +331,6 @@ ol.ierank li { margin-bottom: 3px; break-inside: avoid; }
 .tile.link .tl { font-size: var(--fs-cap); color: var(--fg-muted); }
 .tile.link .big { font-size: var(--fs-h); color: var(--s1); }
 .tile.link .sub { color: var(--fg-muted); font-size: var(--fs-cap); }
+
+/* Only the Aid and Ireland pages use the year and donor controls; elsewhere they are hidden (themes.js) */
+.bar.hide-yrs .yrs, .bar.hide-donor .donor { display: none; }
