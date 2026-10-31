@@ -26,6 +26,15 @@ jobs:
         run: python3 tools/fetch_feeds.py site
         env:
           SITE_URL: https://fineganmark.github.io/${{ github.event.repository.name }}/
+      - name: Fetch UN Comtrade trade totals
+        run: python3 tools/fetch_comtrade.py site
+        env:
+          COMTRADE_KEY: ${{ secrets.COMTRADE_KEY }}
+      - name: Fetch ACLED conflict events
+        run: python3 tools/fetch_acled.py site
+        env:
+          ACLED_EMAIL: ${{ secrets.ACLED_EMAIL }}
+          ACLED_PASSWORD: ${{ secrets.ACLED_PASSWORD }}
       - name: Refresh development indicators
         # Full download on pushes, manual runs and the Monday 03:17 UTC run (weekly); the other 3-hourly runs reuse
         # the live copy. If the build fails, or ends up with under half the live copy's indicators (a source outage),
