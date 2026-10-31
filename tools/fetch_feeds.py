@@ -44,8 +44,9 @@ def main(site):
         for attempt in range(3):
             try:
                 body = get(up)
-                if body.lstrip()[:1] in (b'<', b'{'):
+                if body.lstrip(b'\xef\xbb\xbf \t\r\n')[:1] in (b'<', b'{'):
                     break
+                print('  not a feed', attempt + 1, u, body[:60])
                 body = None
             except Exception as e:
                 print('  retry', attempt + 1, u, e)
