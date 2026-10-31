@@ -30,32 +30,48 @@ def log(msg):
 
 
 def fetch(key, years):
-    q = urllib.parse.urlencode({
+    # Try the key in the header first, then as a query parameter, since the portal's examples use both forms.
+    last = None
+    for how in ('header', 'query'):
+        try:
+            return fetch_once(key, years, how)
+        except urllib.error.HTTPError as e:
+            last = 'HTTP %s' % e.code
+            log('key sent as %s: HTTP %s' % (how, e.code))
+            if e.code != 401:
+                break
+    raise RuntimeError(last)
+
+
+def fetch_once(key, years, how):
+    params = {
         'reporterCode': REPORTER,
         'period': ','.join(str(y) for y in years),
         'partnerCode': '0',      # world
         'flowCode': 'M,X',       # imports, exports
         'cmdCode': 'TOTAL',      # all commodities, the free tier's allowed level
         'maxRecords': '500',
-    })
-    req = urllib.request.Request(API + '?' + q, headers={
-        'User-Agent': UA,
-        'Ocp-Apim-Subscription-Key': key,
-        'Accept': 'application/json',
-    })
-    last = None
+    }
+    headers = {'User-Agent': UA, 'Accept': 'application/json'}
+    if how == 'header':
+        headers['Ocp-Apim-Subscription-Key'] = key
+    else:
+        params['subscription-key'] = key
+    req = urllib.request.Request(API + '?' + urllib.parse.urlencode(params), headers=headers)
     for i in range(3):
         try:
             with urllib.request.urlopen(req, timeout=120) as r:
                 return json.loads(r.read().decode('utf-8'))
         except urllib.error.HTTPError as e:
-            last = 'HTTP %s' % e.code
             if e.code in (401, 403):
-                break  # a bad key won't get better on retry
-        except Exception as e:  # network errors: retry
-            last = str(e)
+                raise  # a bad key won't get better on retry
+            if i == 2:
+                raise
+        except urllib.error.URLError:  # network errors: retry
+            if i == 2:
+                raise
         time.sleep(5 * (i + 1))
-    raise RuntimeError(last)
+    raise RuntimeError('no response')
 
 
 def main():
