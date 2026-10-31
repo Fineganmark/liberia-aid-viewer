@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liberia Assistance data viewer</title>
+<meta name="description" content="Unofficial viewer of official development assistance received by Liberia from all donors, from OECD and IATI data.">
+<meta name="theme-color" content="#0e2a5c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg?v=9598a3cf" type="image/svg+xml">
+<link rel="icon" href="icons/icon-192.png?v=c6aef258" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png?v=6c1a0ae7">
+<link rel="stylesheet" href="app.css?v=7a7cb984">
+<link rel="stylesheet" href="gate.css?v=6bd24bb6">
+<script>document.documentElement.classList.add('ia-guest');</script>
+</head>
+<body>
+<div id="root">
+  <header class="mast" id="top">
+    <span class="ver" title="Viewer version">v8.1</span>
+    <div class="mast-row">
+      <div>
+        <h1>Liberia Assistance data viewer</h1>
+        <p class="take" id="take">Loading…</p>
+        <p class="upd">Last updated on <span id="upd">—</span></p>
+        <p class="basis">Analysis based on OECD and IATI data, subject to verification</p>
+        <div class="links"><a href="#grants">Search projects</a><a href="#ireland">Ireland in Liberia</a><a href="#census">Census maps</a><a href="#about">About the data</a><a href="#reports">References</a><a href="#news">News</a></div>
+      </div>
+      <svg class="lb-flag" viewBox="0 0 151 87" aria-hidden="true" focusable="false"><rect x="0" y="0" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="8" y="0" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="16" y="0" width="7" height="7" rx="1" fill="#fff"/><rect x="24" y="0" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="32" y="0" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="40" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="48" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="56" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="64" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="72" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="80" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="88" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="96" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="104" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="112" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="120" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="128" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="136" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="144" y="0" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="0" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="8" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="16" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="24" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="32" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="40" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="48" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="56" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="64" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="72" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="80" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="88" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="96" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="104" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="112" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="120" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="128" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="136" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="144" y="8" width="7" height="7" rx="1" fill="#fff"/><rect x="0" y="16" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="8" y="16" width="7" height="7" rx="1" fill="#fff"/><rect x="16" y="16" width="7" height="7" rx="1" fill="#fff"/><rect x="24" y="16" width="7" height="7" rx="1" fill="#fff"/><rect x="32" y="16" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="40" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="48" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="56" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="64" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="72" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="80" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="88" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="96" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="104" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="112" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="120" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="128" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="136" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="144" y="16" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="0" y="24" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="8" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="16" y="24" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="24" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="32" y="24" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="40" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="48" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="56" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="64" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="72" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="80" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="88" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="96" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="104" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="112" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="120" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="128" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="136" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="144" y="24" width="7" height="7" rx="1" fill="#fff"/><rect x="0" y="32" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="8" y="32" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="16" y="32" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="24" y="32" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="32" y="32" width="7" height="7" rx="1" fill="#2f6fd6"/><rect x="40" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="48" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="56" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="64" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="72" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="80" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="88" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="96" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="104" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="112" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="120" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="128" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="136" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="144" y="32" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="0" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="8" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="16" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="24" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="32" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="40" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="48" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="56" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="64" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="72" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="80" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="88" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="96" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="104" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="112" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="120" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="128" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="136" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="144" y="40" width="7" height="7" rx="1" fill="#fff"/><rect x="0" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="8" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="16" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="24" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="32" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="40" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="48" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="56" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="64" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="72" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="80" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="88" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="96" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="104" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="112" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="120" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="128" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="136" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="144" y="48" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="0" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="8" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="16" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="24" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="32" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="40" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="48" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="56" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="64" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="72" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="80" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="88" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="96" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="104" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="112" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="120" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="128" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="136" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="144" y="56" width="7" height="7" rx="1" fill="#fff"/><rect x="0" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="8" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="16" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="24" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="32" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="40" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="48" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="56" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="64" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="72" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="80" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="88" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="96" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="104" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="112" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="120" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="128" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="136" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="144" y="64" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="0" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="8" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="16" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="24" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="32" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="40" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="48" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="56" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="64" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="72" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="80" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="88" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="96" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="104" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="112" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="120" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="128" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="136" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="144" y="72" width="7" height="7" rx="1" fill="#fff"/><rect x="0" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="8" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="16" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="24" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="32" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="40" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="48" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="56" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="64" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="72" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="80" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="88" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="96" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="104" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="112" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="120" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="128" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="136" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/><rect x="144" y="80" width="7" height="7" rx="1" fill="var(--lb-red)"/></svg>
+    </div>
+  </header>
+
+  <nav class="bar" aria-label="Controls">
+    <div class="grp"><label class="lab" for="yfrom">Years</label><select class="yr" id="yfrom" aria-label="First year"></select><span class="to">to</span><select class="yr" id="yto" aria-label="Last year"></select></div>
+    <div class="grp"><span class="seg" id="ypreset" role="group" aria-label="Quick year ranges"><button type="button" data-n="1">Latest</button><button type="button" data-n="5">5 yrs</button><button type="button" data-n="0">All</button></span></div>
+    <div class="grp"><span class="lab">Currency</span><span class="seg" id="cur" role="group" aria-label="Currency"><button type="button" data-c="EUR">€</button><button type="button" data-c="USD">US$</button></span></div>
+    <div class="grp"><label class="lab" for="dsel">Donor</label><select id="dsel"></select></div>
+    <div class="jump"><a href="#overview">Overview</a><a href="#donors">Donors</a><a href="#sectors">Sectors</a><a href="#channels">Channels</a><a href="#grants">Projects</a><a href="#ireland">Ireland</a><a href="#census">Census</a><a href="#reports">References</a><a href="#news">News</a><a href="#about">About</a></div>
+  </nav>
+  <p class="dnote" id="dnote" hidden>Showing <b id="dnote-n"></b> only. <button type="button" id="dnote-x">Show all donors</button></p>
+
+  <details class="sec" id="overview" open>
+    <summary><span class="st">Overview</span><span class="sd">How much aid Liberia receives, and how that has changed</span></summary>
+    <div class="tiles" id="tiles"></div>
+    <div class="card">
+      <h2 id="trend-h">Aid received by year</h2>
+      <p class="note" id="trend-note"></p>
+      <div class="legend" id="trend-leg"></div>
+      <div class="chart" id="c-trend"></div>
+    </div>
+    <div class="card" id="ctx-card">
+      <h2>Aid in context, 2005–<span id="ctx-y"></span></h2>
+      <p class="note">OECD DAC2A, all donors: net ODA in US dollars at current prices, as a share of Liberia's gross national income, and per person. The 2007–2010 peaks include debt relief, which helped clear Liberia's arrears after the civil war.</p>
+      <div class="three"><div><h3>Net ODA received</h3><div class="chart" id="c-net"></div></div><div><h3>Net ODA, % of GNI</h3><div class="chart" id="c-gni"></div></div><div><h3>Net ODA per person</h3><div class="chart" id="c-pc"></div></div></div>
+    </div>
+  </details>
+
+  <details class="sec locked" id="donors" open>
+    <summary><span class="st">Donors</span><span class="sd">Who gives, and how the mix has shifted</span></summary>
+    <div class="two">
+      <div class="card">
+        <h2>Largest donors · <span class="yr-lab"></span></h2>
+        <p class="note">Gross disbursements, OECD CRS. Click a donor to look at it on its own.</p>
+        <div class="legend" id="type-leg"></div>
+        <div class="chart" id="c-donors"></div>
+      </div>
+      <div class="card">
+        <h2>By type of donor</h2>
+        <p class="note">Countries (members of the OECD Development Assistance Committee and others) and multilateral organisations.</p>
+        <div class="legend" id="type-leg2"></div>
+        <div class="chart" id="c-types"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>All donors · <span class="yr-lab"></span></h2>
+      <p class="note">Click a column to sort and a row to see that donor's sectors and projects. <span id="ie-note"></span></p>
+      <div class="tw" id="t-donors"></div>
+    </div>
+  </details>
+
+  <details class="sec locked" id="sectors" open>
+    <summary><span class="st">Sectors</span><span class="sd">What the aid is for</span></summary>
+    <div class="two">
+      <div class="card">
+        <h2>By sector · <span class="yr-lab-crs"></span></h2>
+        <p class="note">Grouped from the OECD purpose codes. <span class="dn-lab"></span> <span class="crs-only"></span></p>
+        <div class="chart" id="c-sectors"></div>
+      </div>
+      <div class="card">
+        <h2>Sector trends</h2>
+        <p class="note">The five largest sectors over the selected years; the rest is grouped as Other.</p>
+        <div class="legend" id="sec-leg"></div>
+        <div class="chart" id="c-sectrend"></div>
+      </div>
+    </div>
+    <div class="card"><h2>Sectors by year</h2><p class="note"><span class="dn-lab"></span></p><div class="tw" id="t-sectors"></div></div>
+  </details>
+
+  <details class="sec locked" id="channels" open>
+    <summary><span class="st">Channels</span><span class="sd">Who delivers it: government, NGOs, UN agencies and others</span></summary>
+    <div class="two">
+      <div class="card">
+        <h2>By channel of delivery · <span class="yr-lab-crs"></span></h2>
+        <p class="note">The first organisation that receives the money, as reported by the donor. <span class="dn-lab"></span> <span class="crs-only"></span></p>
+        <div class="chart" id="c-channels"></div>
+      </div>
+      <div class="card">
+        <h2>Type of aid · <span class="yr-lab-crs"></span></h2>
+        <p class="note">OECD aid type: budget support, projects, technical assistance and so on.</p>
+        <div class="chart" id="c-modal"></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="sec locked" id="grants" open>
+    <summary><span class="st">Projects</span><span class="sd">Every project line reported to the OECD, searchable</span></summary>
+    <div class="card">
+      <div class="gf">
+        <input type="search" id="gq" placeholder="Search titles and descriptions" aria-label="Search projects">
+        <select id="gsec" aria-label="Sector"></select>
+        <select id="gch" aria-label="Channel"></select>
+        <label class="lab" for="gmin">At least</label><select id="gmin"><option value="0">any size</option><option value="100000">100k</option><option value="1000000">1m</option><option value="10000000">10m</option></select>
+        <button type="button" class="btn" id="gcsv">Download CSV</button>
+      </div>
+      <p class="gsum" id="gsum"></p>
+      <ul class="glist" id="glist"></ul>
+      <button type="button" class="more-btn" id="gmore" hidden>Show more</button>
+    </div>
+  </details>
+
+  <details class="sec locked" id="iati" open>
+    <summary><span class="st">Latest from IATI</span><span class="sd">Publishers' own, more recent reporting</span></summary>
+    <div class="card">
+      <h2>IATI disbursements to Liberia by publisher · <select id="iati-y" aria-label="IATI year"></select></h2>
+      <p class="note" id="iati-note"></p>
+      <div class="chart" id="c-iati"></div>
+    </div>
+  </details>
+
+  <details class="sec locked" id="ireland" open>
+    <summary><span class="st">Ireland in Liberia</span><span class="sd">Where the projects Ireland funds are, as far as their descriptions say</span></summary>
+    <div class="tiles" id="ie-tiles"></div>
+    <div class="card">
+      <div class="maphead"><h2 id="ie-h">Irish funding by county</h2><span class="seg" id="ie-mode" role="group" aria-label="Measure"><button type="button" data-m="t">Total</button><button type="button" data-m="p">Per person</button></span></div>
+      <p class="note" id="ie-note"></p>
+      <div class="mapwrap"><div class="chart map" id="ie-map"></div><div class="mappanel" id="ie-panel"></div></div>
+      <div class="legend scale" id="ie-scale"></div>
+    </div>
+    <div class="card">
+      <h2>Ireland's projects in Liberia, by where they are</h2>
+      <p class="note">Neither the OECD nor Irish Aid's IATI files record where in Liberia a project is, so each project line is placed by the counties, county capitals and larger towns its title and description name. Lines through the Government of Liberia or for national bodies (elections, the census, the health sector pool fund) count as national. Check a project's description before relying on its place.</p>
+      <div class="filters"><span class="seg" id="ie-f" role="group" aria-label="Where"></span></div>
+      <p class="gsum" id="ie-sum"></p>
+      <ul class="glist" id="ie-list"></ul>
+      <button type="button" class="more-btn" id="ie-more" hidden>Show more</button>
+    </div>
+  </details>
+
+  <details class="sec" id="census" open>
+    <summary><span class="st">Census 2022</span><span class="sd">Liberia's people by county and district, from the 2022 National Population and Housing Census</span></summary>
+    <div class="tiles" id="cen-tiles"></div>
+    <div class="card">
+      <div class="maphead"><h2 id="cen-h">Census by county</h2><div class="mapctl"><label class="lab" for="cen-m">Show</label><select id="cen-m"></select><span class="seg" id="cen-lv" role="group" aria-label="Map level"><button type="button" data-l="c">Counties</button><button type="button" data-l="d">Districts</button></span></div></div>
+      <p class="note" id="cen-note"></p>
+      <div class="mapwrap"><div class="chart map" id="cen-map"></div><div class="mappanel" id="cen-panel"></div></div>
+      <div class="legend scale" id="cen-scale"></div>
+    </div>
+    <div class="two">
+      <div class="card"><h2 id="cen-rank-h">Counties ranked</h2><p class="note">Click a bar to pick that county.</p><div class="chart" id="cen-rank"></div></div>
+      <div class="card"><h2>Liberia's population at each census</h2><p class="note">National Population and Housing Censuses, 1962 to 2022 (LISGIS). There was no census between 1984 and 2008 because of the civil wars.</p><div class="chart" id="cen-hist"></div></div>
+    </div>
+    <div class="card">
+      <h2>All census figures by county</h2>
+      <p class="note">Click a column to sort and a row to pick the county. Source: Liberia Institute of Statistics and Geo-Information Services (LISGIS), 2022 National Population and Housing Census, tables published on lisgis.gov.lr (CC BY 4.0). Boundaries: LISGIS 2022.</p>
+      <div class="filters"><span class="seg" id="cen-tgrp" role="group" aria-label="Table"></span></div>
+      <div class="tw" id="cen-table"></div>
+    </div>
+  </details>
+
+  <details class="sec" id="reports" open>
+    <summary><span class="st">References</span><span class="sd">Recent reports on Liberia's economy and development from the World Bank, IMF, African Development Bank, UN and government</span></summary>
+    <div class="card prose refs">
+      <h2>What recent reports point to</h2>
+      <p class="note">Summary as of 25 October 2026, drawn from the reports listed below. Each point says which report it comes from.</p>
+      <ul class="trends">
+        <li><b>Growth is picking up.</b> The World Bank estimates growth of 5.1% in 2025, up from 4.0% in 2024 (Macro Poverty Outlook, April 2026). The IMF, which credits mining, construction and manufacturing, projects 5.5% for 2026 (September 2026). The African Development Bank puts 2025 lower, at 4.6% (Country Focus Report, July 2026), so estimates differ. The World Bank's October 2026 update also projects 5.5% for 2026.</li>
+        <li><b>Aid is falling and squeezing the budget.</b> Grants fell from 7.8% of GDP in 2024 to 5.1% in 2025, and the World Bank says declining external aid is tightening fiscal space (April 2026). In this viewer's OECD data, gross aid to Liberia fell from US$1.14bn in 2015 to US$524m in 2024.</li>
+        <li><b>US aid cuts hit hardest.</b> US aid was close to 2.6% of Liberia's national income, the highest share of any country, according to the Center for Global Development. About US$290m of the US$443m expected for 2025 was affected, with health (malaria, maternal health, HIV) worst hit (Africanews, July 2025).</li>
+        <li><b>More budget money now comes from the IMF and World Bank.</b> The IMF's Extended Credit Facility (since September 2024) and its SDR 193.8m (about US$265m) Resilience and Sustainability Facility for climate, approved in April 2026, passed their latest reviews in September 2026. The World Bank approved US$55.8m of budget support in June 2026 to help close an "emerging financing gap".</li>
+        <li><b>Public finances have tightened.</b> The deficit narrowed to about 1–2% of GDP in 2025 (World Bank 1.1%, AfDB 1.8%) and public debt is about 52–55% of GDP. The IMF says a VAT is due in 2027 alongside mining tax reform (September 2026).</li>
+        <li><b>Poverty remains high.</b> 35.8% of Liberians lived on less than US$3 a day in 2025, projected to fall to 29.8% by 2028 (World Bank, April 2026).</li>
+        <li><b>Risks named across the reports:</b> declining donor support and concessional finance, commodity and fuel prices, governance and capacity, and climate shocks.</li>
+        <li><b>The plan:</b> the government's ARREST Agenda for Inclusive Development 2025–2029 targets average growth of 5.9% a year (January 2025). The African Development Bank has a new country strategy for 2026–2031.</li>
+      </ul>
+      <p class="caveat"><b>Caveat.</b> This is a short summary of other organisations' published reports, made for this tool and checked against them on 25 October 2026. It is not an assessment by this tool or by any government, and it may not reflect reports or revisions published since. The figures come from different sources and dates and don't always agree, and some (the US aid figures) come from press reporting. Read the reports themselves before relying on any figure.</p>
+      <h2>Latest reports</h2>
+      <div id="refs-live" aria-live="polite"></div>
+      <h2>Key reports</h2>
+      <p class="note">Chosen by hand on 25 October 2026. These are the reports the summary above draws on.</p>
+      <div id="refs-key">
+      <div class="refgrp">
+      <h3>World Bank</h3>
+      <ul class="reflist">
+        <li><a href="https://thedocs.worldbank.org/en/doc/bae48ff2fefc5a869546775b3f010735-0500062021/related/mpo-lbr.pdf" target="_blank" rel="noopener">Macro Poverty Outlook: Liberia</a> <span>April 2026 · growth, poverty, inflation, fiscal outlook (PDF)</span></li>
+        <li><a href="https://openknowledge.worldbank.org/entities/publication/61e38e43-daab-45ba-acd0-649301c188f1" target="_blank" rel="noopener">Liberia Economic Update, sixth edition: From Stabilization to Inclusion</a> <span>September 2025 · growth, agriculture and jobs</span></li>
+        <li><a href="https://www.worldbank.org/en/news/press-release/2026/06/02/new-financing-to-strengthen-fiscal-resilience-and-private-sector-development" target="_blank" rel="noopener">US$55.8m Second Resilient and Inclusive Growth Development Policy Financing</a> <span>June 2026 · press release</span></li>
+        <li><a href="https://www.worldbank.org/ext/en/country/liberia" target="_blank" rel="noopener">World Bank in Liberia</a> <span>country page, projects and documents</span></li>
+      </ul>
+      </div>
+      <div class="refgrp">
+      <h3>International Monetary Fund</h3>
+      <ul class="reflist">
+        <li><a href="https://www.imf.org/en/news/articles/2026/09/28/pr-26309-imf-liberia-fourth-review-ecfa-first-review-rcfa" target="_blank" rel="noopener">Fourth review under the Extended Credit Facility and first review under the Resilience and Sustainability Facility</a> <span>September 2026 · press release with selected indicators</span></li>
+        <li><a href="https://www.imf.org/en/publications/cr/issues/2026/05/13/liberia-third-review-under-the-extended-credit-facility-arrangement-and-request-for-an-576039" target="_blank" rel="noopener">Third review under the ECF and request for an RSF arrangement: staff report</a> <span>May 2026 · full analysis</span></li>
+        <li><a href="https://www.imf.org/en/Publications/CR/Issues/2025/11/06/Liberia-Poverty-Reduction-Strategy-Paper-571604" target="_blank" rel="noopener">Liberia: Poverty Reduction Strategy Paper</a> <span>November 2025 · the national development plan as published by the IMF</span></li>
+      </ul>
+      </div>
+      <div class="refgrp">
+      <h3>African Development Bank</h3>
+      <ul class="reflist">
+        <li><a href="https://www.afdb.org/en/documents/country-focus-report-2026-liberia-mobilizing-liberias-development-financing-scale-fragmented-world" target="_blank" rel="noopener">Country Focus Report 2026: Mobilizing Liberia's Development Financing at Scale in a Fragmented World</a> <span>July 2026</span></li>
+        <li><a href="https://www.afdb.org/en/documents/liberia-country-strategy-paper-2026-2031" target="_blank" rel="noopener">Liberia Country Strategy Paper 2026–2031</a> <span>2026</span></li>
+        <li><a href="https://www.afdb.org/en/countries/west-africa/liberia/liberia-economic-outlook" target="_blank" rel="noopener">Liberia Economic Outlook</a> <span>regularly updated</span></li>
+      </ul>
+      </div>
+      <div class="refgrp">
+      <h3>Government of Liberia and United Nations</h3>
+      <ul class="reflist">
+        <li><a href="https://liberia.un.org/en/node/287777" target="_blank" rel="noopener">ARREST Agenda for Inclusive Development (AAID) 2025–2029</a> <span>January 2025 · national development plan</span></li>
+        <li><a href="https://www.wfp.org/operations/lr02-liberia-country-strategic-plan-2019-2026" target="_blank" rel="noopener">WFP Liberia country strategic plan 2019–2026</a> <span>food security programme</span></li>
+        <li><a href="https://news.un.org/en/story/2026/01/1166776" target="_blank" rel="noopener">Aid cuts push millions in West and Central Africa deeper into hunger</a> <span>January 2026 · UN News, regional</span></li>
+      </ul>
+      </div>
+      <div class="refgrp">
+      <h3>Press</h3>
+      <ul class="reflist">
+        <li><a href="https://www.africanews.com/amp/2025/07/08/liberias-health-sector-stares-at-a-crisis-as-usaid-comes-to-an-end/" target="_blank" rel="noopener">Liberia's health sector stares at a crisis as USAID comes to an end</a> <span>July 2025 · Africanews</span></li>
+      </ul>
+      </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="sec" id="news">
+    <summary><span class="st">News</span><span class="sd">Latest aid and development news about Liberia</span></summary>
+    <div class="card"><div id="news-root"></div></div>
+  </details>
+
+  <details class="sec" id="about">
+    <summary><span class="st">About the data</span><span class="sd">Sources, methods and caveats</span></summary>
+    <div class="card prose" id="about-body"></div>
+  </details>
+
+  <footer class="disclaimer">
+    <p><b>Disclaimer.</b> This is an independent, unofficial analysis tool. It is not a publication of the Government of Liberia, the Department of Foreign Affairs, Irish Aid, the Government of Ireland or any donor, and does not represent their views or official statistics.</p>
+    <p>Figures are drawn from publicly available data published by the OECD (Creditor Reporting System and DAC2A), to IATI (via d-portal.org) and by the World Bank. Groupings of sectors, channels and donor types, and euro conversions, are this tool's own and may differ from official presentations. See About the data for details.</p>
+    <p>The analysis is provided as is, for information only, and is subject to verification. While care has been taken, no guarantee is given that it is complete, accurate or up to date, and no liability is accepted for any use made of it. For official figures, please refer to OECD statistics and the publishing organisations.</p>
+    <p>If you register, your email address is used only to manage your access to this site and is never shared.</p>
+  </footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+<script src="data/data.js?v=07ea1804"></script>
+<script src="app.js?v=a4de0b2d"></script>
+<script src="data/maps.js?v=3d3eb78a"></script>
+<script src="mapview.js?v=93a3d5f5"></script>
+<script src="relay.js?v=4a9d66c1"></script>
+<script src="news.js?v=05245467"></script>
+<script src="refs-live.js?v=62961342"></script>
+<script src="news-config.js?v=f1c66cf5"></script>
+<script src="vendor/firebase-app-compat.js?v=a959c475"></script>
+<script src="vendor/firebase-auth-compat.js?v=dccc813e"></script>
+<script src="auth-config.js?v=75574241"></script>
+<script src="gate.js?v=b0968bfb"></script>
+</body>
+</html>

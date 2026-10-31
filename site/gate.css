@@ -1,0 +1,29 @@
+/* register / sign-in (gate.js) */
+/* signed out: locked sections keep their width (so charts draw correctly) but take no space */
+html.ia-guest .sec.locked > :not(summary):not(.ig-lockcard) { visibility: hidden; height: 0; overflow: hidden; margin: 0; padding: 0; border: 0; }
+html.ia-guest .grp:has(#dsel), html.ia-guest #dnote, html.ia-guest .mast .links a[href="#grants"] { display: none !important; }
+html:not(.ia-guest) .ig-lockcard { display: none; }
+.ig-lockcard { border: 1px dashed var(--line, #c8c8c8); border-radius: 8px; padding: 20px; margin: 12px 0 24px; background: var(--hl, rgba(42,120,214,.08)); }
+.ig-lockcard p { margin: 0 0 12px; color: var(--fg, #1a1a1a); }
+.ig-lockbtns { display: flex; gap: 10px; flex-wrap: wrap; }
+html.ig-open body { overflow: hidden; }
+#ia-gate { position: fixed; inset: 0; z-index: 1000; overflow: auto; background: rgba(0,0,0,.45); display: flex; align-items: flex-start; justify-content: center; padding: 8vh 16px 32px; box-sizing: border-box; font-family: inherit; }
+#ia-gate[hidden] { display: none; }
+#ia-gate .ig-card { position: relative; width: 100%; max-width: 24rem; border: 1px solid var(--line, #d0d0d0); border-top: 4px solid #bf0a30; border-radius: 8px; padding: 24px; box-sizing: border-box; background: var(--panel, #fff); color: var(--fg, #1a1a1a); box-shadow: 0 12px 40px rgba(0,0,0,.25); }
+#ia-gate .ig-close { position: absolute; top: 8px; right: 10px; font: inherit; font-size: 1.5rem; line-height: 1; background: none; border: 0; padding: 4px 8px; cursor: pointer; color: var(--fg-muted, #555); }
+#ia-gate .ig-title { margin: 0 0 6px; font-size: 1.35rem; color: var(--fg, #1a1a1a); }
+#ia-gate .ig-lead { margin: 0 0 16px; color: var(--fg-muted, #555); font-size: .95rem; }
+#ia-gate .ig-tabs { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 1px solid var(--line, #d0d0d0); }
+#ia-gate [hidden] { display: none !important; }
+#ia-gate .ig-tabs button { font: inherit; background: none; border: 0; border-bottom: 3px solid transparent; padding: 8px 12px; cursor: pointer; color: var(--fg-muted, #555); }
+#ia-gate .ig-tabs button[aria-selected="true"] { color: var(--fg, #1a1a1a); border-bottom-color: #1d3f7a; font-weight: 600; }
+#ia-gate form, #ia-gate #ig-verify { display: grid; gap: 12px; }
+#ia-gate label { display: grid; gap: 4px; font-size: .85rem; color: var(--fg-muted, #555); font-weight: 500; }
+#ia-gate input { font: inherit; font-size: 1rem; color: var(--fg, #1a1a1a); background: var(--panel, #fff); border: 1px solid var(--line, #bbb); border-radius: 6px; padding: 9px 10px; width: 100%; box-sizing: border-box; }
+#ia-gate input:focus-visible, #ia-gate button:focus-visible, .ig-lockcard button:focus-visible { outline: 2px solid #1d3f7a; outline-offset: 1px; }
+.ig-go { font: inherit; font-weight: 600; background: #1d3f7a; color: #fff; border: 0; border-radius: 6px; padding: 10px 16px; cursor: pointer; }
+.ig-ghost { font: inherit; font-weight: 600; background: none; color: var(--fg, #1a1a1a); border: 1px solid var(--line, #bbb); border-radius: 6px; padding: 9px 16px; cursor: pointer; }
+#ia-gate .ig-link { font: inherit; font-size: .85rem; background: none; border: 0; padding: 0; color: var(--fg-muted, #555); text-decoration: underline; cursor: pointer; justify-self: start; }
+#ia-gate .ig-msg { min-height: 1.2em; margin: 12px 0 0; font-size: .9rem; }
+#ia-gate .ig-note { margin: 16px 0 0; font-size: .75rem; color: var(--fg-muted, #555); }
+#ia-gate #ig-verify p { margin: 0; }

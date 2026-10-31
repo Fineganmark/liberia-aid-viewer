@@ -1,0 +1,6 @@
+# written by tools/list_feeds.js; read by tools/fetch_feeds.py
+/feeds/gnews?q=Liberia%20(%22Irish%20Aid%22%20OR%20%22Embassy%20of%20Ireland%22%20OR%20Ireland)&hl=en-US&gl=US&ceid=US:en
+/feeds/gnews?q=Liberia%20(aid%20OR%20donor%20OR%20donors%20OR%20grant%20OR%20%22development%20partners%22%20OR%20%22World%20Bank%22%20OR%20IMF%20OR%20USAID%20OR%20humanitarian%20OR%20%22budget%20support%22)&hl=en-US&gl=US&ceid=US:en
+/feeds/gnews?q=Liberia%20(site%3Amfdp.gov.lr%20OR%20site%3Aemansion.gov.lr%20OR%20%22Ministry%20of%20Finance%20and%20Development%20Planning%22)&hl=en-US&gl=US&ceid=US:en
+/feeds/reliefweb/country/lbr/rss.xml
+/feeds/wbdocs?format=json&countrycode_exact=LR&rows=40&sort=docdt&order=desc&fl=docdt,docty,display_title,url&majdocty_exact=Publications%20%26%20Research
