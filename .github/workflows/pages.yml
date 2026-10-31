@@ -27,11 +27,17 @@ jobs:
         env:
           SITE_URL: https://fineganmark.github.io/${{ github.event.repository.name }}/
       - name: Fetch UN Comtrade trade totals
-        run: python3 tools/fetch_comtrade.py site
+        run: |
+          mkdir -p site/data/live
+          curl -sfL "https://fineganmark.github.io/${{ github.event.repository.name }}/data/live/comtrade_lbr.json" -o site/data/live/comtrade_lbr.json || rm -f site/data/live/comtrade_lbr.json
+          python3 tools/fetch_comtrade.py site
         env:
           COMTRADE_KEY: ${{ secrets.COMTRADE_KEY }}
       - name: Fetch ACLED conflict events
-        run: python3 tools/fetch_acled.py site
+        run: |
+          mkdir -p site/data/live
+          curl -sfL "https://fineganmark.github.io/${{ github.event.repository.name }}/data/live/acled_lbr.json" -o site/data/live/acled_lbr.json || rm -f site/data/live/acled_lbr.json
+          python3 tools/fetch_acled.py site
         env:
           ACLED_EMAIL: ${{ secrets.ACLED_EMAIL }}
           ACLED_PASSWORD: ${{ secrets.ACLED_PASSWORD }}
