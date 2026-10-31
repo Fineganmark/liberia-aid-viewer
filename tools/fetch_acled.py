@@ -80,7 +80,8 @@ def main():
     try:
         events = read_events(token)
     except urllib.error.HTTPError as e:
-        log('data request refused: HTTP %s at %s (the token worked, so check the account has API access); keeping the previous file' % (e.code, READ_URL))
+        body = e.read()[:300].decode('utf-8', 'replace').replace('\n', ' ')
+        log('data request refused: HTTP %s at %s; ACLED said: %s; keeping the previous file' % (e.code, READ_URL, body))
         return
     except Exception as e:
         log('data request failed (%s); keeping the previous file' % e)
