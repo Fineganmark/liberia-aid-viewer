@@ -12,6 +12,8 @@
   const CRSY = D.meta.years, LASTY = CRSY[CRSY.length - 1];
   const ST = { y0: CRSY[0], y1: LASTY, cur: 'EUR' };
   const C = M.counties, NC = C.length;
+  // county measures from the Demographic and Health Survey (data/indicators.js), shown with the census ones
+  if (window.LBR_IND && window.LBR_IND.dhs && !M.cm.some((m) => m.src)) M.cm.push(...window.LBR_IND.dhs);
 
   function sv(tag, attrs, parent) { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
   function svgBox(w, h) { const s = document.createElementNS(SVGNS, 'svg'); s.setAttribute('viewBox', '0 0 ' + w + ' ' + h); s.setAttribute('role', 'img'); return s; }
@@ -130,7 +132,7 @@
     const cl = classes(vals);
     const where = isD ? 'district' : 'county';
     $('#cen-h').textContent = m.l + ' by ' + where;
-    const src = isD ? 'LISGIS 2022 census, population by district (area measured from the LISGIS district boundaries).' : 'LISGIS 2022 census: ' + m.s + '.';
+    const src = isD ? 'LISGIS 2022 census, population by district (area measured from the LISGIS district boundaries).' : m.src || 'LISGIS 2022 census: ' + m.s + '.';
     $('#cen-note').textContent = (m.note ? m.note + ' ' : '') + (!isD && m.nat != null ? 'Liberia: ' + fv(m.nat, m.f) + '. ' : '') + src + (circles ? ' Circles are sized by the number; darker shading would only show which places are large.' : ' Five shades, each holding about the same number of ' + where.replace('y', 'ie') + 's.');
     const maxV = Math.max(...vals.filter((v) => v != null));
     const rad = (v) => Math.sqrt(Math.max(0, v) / maxV) * (isD ? 30 : 60);
@@ -140,7 +142,7 @@
       return '<b>' + esc(it.n) + '</b><br>' + esc(parent) + '<br>' + esc(m.l) + ': <span class="tv">' + fv(vals[i], m.f) + '</span>' + (!isD && m.nat != null ? '<br>Liberia: ' + fv(m.nat, m.f) : '');
     };
     drawMap(box, items, {
-      label: m.l + ' by ' + where + ', Liberia 2022 census',
+      label: m.l + ' by ' + where + (m.src ? ', Liberia DHS 2019\u201320' : ', Liberia 2022 census'),
       fill: (i) => (circles ? 'var(--q0)' : cl.col(vals[i])),
       tip: tipOf,
       click: (i) => { CS.sel = isD ? items[i].p : i; renderCensus(); renderPanel(); },

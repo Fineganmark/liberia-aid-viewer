@@ -26,6 +26,26 @@ jobs:
         run: python3 tools/fetch_feeds.py site
         env:
           SITE_URL: https://fineganmark.github.io/${{ github.event.repository.name }}/
+      - name: Refresh development indicators
+        # Full download on pushes, manual runs and the Monday 03:17 UTC run (weekly); the other 3-hourly runs reuse
+        # the live copy. If the build fails, or ends up with under half the live copy's indicators (a source outage),
+        # the live copy stays. A smaller failure only drops that source's indicators.
+        run: |
+          live="https://fineganmark.github.io/${{ github.event.repository.name }}/data/indicators.js"
+          curl -sfL "$live" -o site/data/indicators.js || rm -f site/data/indicators.js
+          if [ "${{ github.event_name }}" != schedule ] || { [ "$(date -u +%u)" = 1 ] && [ "$(date -u +%-H)" -ge 3 ] && [ "$(date -u +%-H)" -lt 6 ]; } || [ ! -s site/data/indicators.js ]; then
+            python3 tools/fetch_indicators.py "$RUNNER_TEMP/indicators-raw"
+            cp site/data/indicators.js "$RUNNER_TEMP/indicators-live.js" 2>/dev/null || true
+            python3 tools/build_indicators.py || cp "$RUNNER_TEMP/indicators-live.js" site/data/indicators.js
+            python3 tools/keep_indicators.py "$RUNNER_TEMP/indicators-live.js" site/data/indicators.js \
+              || cp "$RUNNER_TEMP/indicators-live.js" site/data/indicators.js
+          else
+            echo "reusing the live indicators.js (weekly refresh runs on Mondays)"
+          fi
+        env:
+          LBR_IND_RAW: ${{ runner.temp }}/indicators-raw
+          LBR_IND_OUT: site/data/indicators.js
+          LBR_MAPS: site/data/maps.js
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
