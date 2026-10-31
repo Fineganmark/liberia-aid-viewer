@@ -70,9 +70,20 @@ def main():
         log('ACLED_EMAIL or ACLED_PASSWORD not set; keeping the previous file')
         return
     try:
-        events = read_events(get_token(email, password))
+        token = get_token(email, password)
+    except urllib.error.HTTPError as e:
+        log('token request refused: HTTP %s at %s (check ACLED_EMAIL and ACLED_PASSWORD, and that API access is on for the account); keeping the previous file' % (e.code, TOKEN_URL))
+        return
     except Exception as e:
-        log('request failed (%s); keeping the previous file' % e)
+        log('token request failed (%s); keeping the previous file' % e)
+        return
+    try:
+        events = read_events(token)
+    except urllib.error.HTTPError as e:
+        log('data request refused: HTTP %s at %s (the token worked, so check the account has API access); keeping the previous file' % (e.code, READ_URL))
+        return
+    except Exception as e:
+        log('data request failed (%s); keeping the previous file' % e)
         return
     if not events:
         log('no events returned; keeping the previous file')
