@@ -365,3 +365,9 @@ ul.plain li { margin: 0 0 var(--gap-xs); }
 .seg.seg-wrap .seg-row { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
 .seg.seg-wrap .seg-groups { padding-bottom: 6px; border-bottom: 1px solid var(--line); }
 .seg.seg-wrap .seg-items { padding-top: 2px; }
+
+/* Phone: the category buttons stack, each full width */
+@media (max-width: 640px) {
+  .seg.seg-wrap .seg-groups { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .seg.seg-wrap .seg-groups button { width: 100%; justify-content: center; border-radius: var(--radius); padding: 10px 12px; }
+}

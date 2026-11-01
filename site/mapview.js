@@ -131,7 +131,7 @@
     const circles = CIRCLE(m);
     const cl = classes(vals);
     const where = isD ? 'district' : 'county';
-    $('#cen-h').textContent = m.l + ' by ' + where;
+    // the heading stays fixed; the measure is named in the caption under the buttons
     const src = isD ? 'LISGIS 2022 census, population by district (area measured from the LISGIS district boundaries).' : m.src || 'LISGIS 2022 census: ' + m.s + '.';
     $('#cen-note').textContent = (m.note ? m.note + ' ' : '') + (!isD && m.nat != null ? 'Liberia: ' + fv(m.nat, m.f) + '. ' : '') + src + (circles ? ' Circles are sized by the number; darker shading would only show which places are large.' : ' Five shades, each holding about the same number of ' + where.replace('y', 'ie') + 's.');
     const maxV = Math.max(...vals.filter((v) => v != null));
