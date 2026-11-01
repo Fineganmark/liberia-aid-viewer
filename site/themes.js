@@ -8,6 +8,7 @@
     aid: ['overview', 'donors', 'sectors', 'channels', 'grants', 'iati'],
     trade: ['trade'],
     economy: ['economy'],
+    politics: ['politics'],
     ireland: ['ireland'],
     census: ['census'],
     indicators: ['devind'],

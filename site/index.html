@@ -10,14 +10,14 @@
 <link rel="icon" href="icons/icon.svg?v=9598a3cf" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png?v=c6aef258" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png?v=6c1a0ae7">
-<link rel="stylesheet" href="app.css?v=3139bb93">
+<link rel="stylesheet" href="app.css?v=bc4e0ec7">
 <link rel="stylesheet" href="gate.css?v=6bd24bb6">
 <script>document.documentElement.classList.add('ia-guest');</script>
 </head>
 <body>
 <div id="root">
   <header class="mast" id="top">
-    <span class="ver" title="Viewer version">v11</span>
+    <span class="ver" title="Viewer version">v12</span>
     <div class="mast-row">
       <div>
         <h1>Liberia Assistance data viewer</h1>
@@ -35,7 +35,7 @@
     <div class="grp yrs"><span class="seg" id="ypreset" role="group" aria-label="Quick year ranges"><button type="button" data-n="1">Latest</button><button type="button" data-n="5">5 yrs</button><button type="button" data-n="0">All</button></span></div>
     <div class="grp"><span class="lab">Currency</span><span class="seg" id="cur" role="group" aria-label="Currency"><button type="button" data-c="EUR">€</button><button type="button" data-c="USD">US$</button></span></div>
     <div class="grp donor"><label class="lab" for="dsel">Donor</label><select id="dsel"></select></div>
-    <nav class="jump" id="themes" aria-label="Themes"><a href="#landing">Home</a><a href="#aid">Aid</a><a href="#trade">Trade</a><a href="#economy">Economy</a><a href="#ireland">Ireland</a><a href="#census">Census</a><a href="#indicators">Indicators</a><a href="#reports">Reports &amp; news</a><a href="#about">About</a></nav>
+    <nav class="jump" id="themes" aria-label="Themes"><a href="#landing">Home</a><a href="#aid">Aid</a><a href="#trade">Trade</a><a href="#economy">Economy</a><a href="#politics">Politics</a><a href="#ireland">Ireland</a><a href="#census">Census</a><a href="#indicators">Indicators</a><a href="#reports">Reports &amp; news</a><a href="#about">About</a></nav>
   </nav>
   <p class="dnote" id="dnote" hidden>Showing <b id="dnote-n"></b> only. <button type="button" id="dnote-x">Show all donors</button></p>
 
@@ -188,6 +188,43 @@
     </div>
   </details>
 
+  <details class="sec" id="politics" open>
+    <summary><span class="st">Politics and government</span><span class="sd">Who is who in Liberia’s government, with the three branches</span></summary>
+    <div class="card">
+      <h2>Who is who</h2>
+      <p class="note">From the government cabinet list (cabinet.gov.lr, updated 28 August 2026) and the legislature and office-holder records. Photographs will be added once an official, reusable portrait is confirmed for each person. Rows marked “To confirm” are not yet checked.</p>
+      <div class="who-grid">
+        <div class="who"><span class="av" aria-hidden="true">JS</span><div><div class="wn">Joseph Nyuma Boakai Sr.</div><div class="wr">President</div><div class="wnote">Since 22 January 2024</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">JK</span><div><div class="wn">Jeremiah Kpan Koung</div><div class="wr">Vice President</div><div class="wnote">Since 22 January 2024</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">SN</span><div><div class="wn">Sara Beysolow Nyanti</div><div class="wr">Minister of Foreign Affairs</div><div class="wnote">Dean of the Cabinet</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">AI</span><div><div class="wn">Augustine Kpehe Ngafuan II</div><div class="wr">Minister of Finance and Development Planning</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">NT</span><div><div class="wn">Cllr. N. Oswald Tweh</div><div class="wr">Minister of Justice</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">LK</span><div><div class="wn">Dr. Louise M. Kpoto</div><div class="wr">Minister of Health</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">JN</span><div><div class="wn">Dr. J. Alexander Nuetah</div><div class="wr">Minister of Agriculture</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">RT</span><div><div class="wn">R. Matenokay Tingban</div><div class="wr">Minister of Lands, Mines and Energy</div><div class="wnote">Appointed November 2025 (Wikipedia citation)</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">RG</span><div><div class="wn">Roland Lafayette Giddings</div><div class="wr">Minister of Public Works</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">GH</span><div><div class="wn">Gbeme Horace-Kollie</div><div class="wr">Minister of Gender, Children and Social Protection</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">MD</span><div><div class="wn">Magdalene Dagoseh</div><div class="wr">Minister of Commerce and Industry</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">JP</span><div><div class="wn">Jerolinmek M. Piah</div><div class="wr">Minister of Information, Culture and Tourism</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">CK</span><div><div class="wn">Cllr. Cooper W. Kruah</div><div class="wr">Minister of Labour</div><div class="wnote">Appointed 2024</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">ST</span><div><div class="wn">Sirleaf Ralph Tyler</div><div class="wr">Minister of Transport</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">CK</span><div><div class="wn">Cornelia Kruah</div><div class="wr">Minister of Youth and Sports</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">RK</span><div><div class="wn">Richard N. Koon</div><div class="wr">Speaker, House of Representatives</div><div class="wnote">Check: the legislature article still discusses a 2024 leadership dispute</div></div></div>
+        <div class="who"><span class="av" aria-hidden="true">NK</span><div><div class="wn">Nyonblee Karnga-Lawrence</div><div class="wr">President Pro Tempore, Senate</div><div class="wnote">Since 15 January 2024</div></div></div>
+        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Chief Justice</div><div class="wnote">Not in the sources checked yet</div></div></div>
+        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Education</div><div class="wnote">Not in the official list checked</div></div></div>
+        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Defence</div><div class="wnote">Not in the official list checked</div></div></div>
+        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Internal Affairs</div><div class="wnote">Not in the official list checked</div></div></div>
+        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Posts and Telecommunications</div><div class="wnote">Not in the official list checked</div></div></div>
+      </div>
+      <p class="note">Sources: <a href="https://cabinet.gov.lr/cabinet-members/" target="_blank" rel="noopener">Cabinet of Liberia</a> · <a href="https://en.wikipedia.org/wiki/Legislature_of_Liberia" target="_blank" rel="noopener">Legislature of Liberia</a></p>
+    </div>
+    <div class="card">
+      <h2>How government is organised</h2>
+      <ul class="plain"><li><b>Executive:</b> the President, who is head of state and government, the Vice President, and the ministries.</li><li><b>Legislature:</b> the Senate and the House of Representatives. The Senate is led by its President Pro Tempore and the House by its Speaker.</li><li><b>Judiciary:</b> the Supreme Court, led by the Chief Justice.</li></ul>
+    </div>
+  </details>
+
   <details class="sec locked" id="ireland" open>
     <summary><span class="st">Ireland in Liberia</span><span class="sd">Where the projects Ireland funds are, as far as their descriptions say</span></summary>
     <div class="tiles" id="ie-tiles"></div>
@@ -323,7 +360,7 @@
 <script src="segsel.js?v=3618e710"></script>
 <script src="trade.js?v=7737a81b"></script>
 <script src="economy.js?v=0"></script>
-<script src="themes.js?v=e22f34eb"></script>
+<script src="themes.js?v=103bdb84"></script>
 <script src="devind.js?v=87c1b1c8"></script>
 <script src="relay.js?v=4a9d66c1"></script>
 <script src="news.js?v=05245467"></script>

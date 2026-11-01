@@ -341,3 +341,15 @@ ol.ierank li { margin-bottom: 3px; break-inside: avoid; }
 .prose .reflist li { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .prose .reflist a { color: var(--s1); font-weight: 600; }
 .prose .reflist span { display: block; font-size: var(--fs-cap); color: var(--fg-muted); }
+
+/* Politics: who is who */
+.who-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); gap: var(--gap-sm); margin: var(--gap-md) 0; }
+.who { display: flex; gap: var(--gap-sm); align-items: flex-start; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+.who .av { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--hl); color: var(--s1); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: var(--fs-h); }
+.who .wn { font-weight: 600; }
+.who .wr { font-size: var(--fs-cap); color: var(--fg-muted); }
+.who .wnote { font-size: var(--fs-cap); color: var(--fg-muted); margin-top: 4px; }
+.who.pending .av { color: var(--fg-muted); }
+.who.pending .wn i { color: var(--fg-muted); font-weight: 400; }
+ul.plain { padding-left: 1.1em; margin: 0; }
+ul.plain li { margin: 0 0 var(--gap-xs); }
