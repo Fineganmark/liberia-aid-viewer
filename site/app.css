@@ -371,3 +371,11 @@ ul.plain li { margin: 0 0 var(--gap-xs); }
   .seg.seg-wrap .seg-groups { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .seg.seg-wrap .seg-groups button { width: 100%; justify-content: center; border-radius: var(--radius); padding: 10px 12px; }
 }
+
+button.who { text-align: left; color: inherit; font: inherit; cursor: pointer; width: 100%; }
+button.who:hover { border-color: var(--s1); }
+button.who:disabled { cursor: default; }
+.who-dlg { max-width: min(92vw, 36rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); color: var(--fg); padding: var(--gap-lg); box-shadow: var(--shadow); }
+.who-dlg::backdrop { background: rgba(0,0,0,.35); }
+.who-dlg h2 { font-family: var(--font-serif); font-weight: 400; font-size: var(--fs-title); margin: 0 0 var(--gap-xs); }
+.who-x { float: right; font-size: var(--fs-cap); padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--fg); cursor: pointer; }

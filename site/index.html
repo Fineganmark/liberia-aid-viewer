@@ -10,7 +10,7 @@
 <link rel="icon" href="icons/icon.svg?v=9598a3cf" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png?v=c6aef258" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png?v=6c1a0ae7">
-<link rel="stylesheet" href="app.css?v=a090f3af">
+<link rel="stylesheet" href="app.css?v=2aed35bd">
 <link rel="stylesheet" href="gate.css?v=6bd24bb6">
 <script>document.documentElement.classList.add('ia-guest');</script>
 </head>
@@ -192,31 +192,9 @@
     <summary><span class="st">Politics and government</span><span class="sd">Who is who in Liberia’s government, with the three branches</span></summary>
     <div class="card">
       <h2>Who is who</h2>
-      <p class="note">From the government cabinet list (cabinet.gov.lr, updated 28 August 2026) and the legislature and office-holder records. Photographs will be added once an official, reusable portrait is confirmed for each person. Rows marked “To confirm” are not yet checked.</p>
-      <div class="who-grid">
-        <div class="who"><span class="av" aria-hidden="true">JS</span><div><div class="wn">Joseph Nyuma Boakai Sr.</div><div class="wr">President</div><div class="wnote">Since 22 January 2024</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">JK</span><div><div class="wn">Jeremiah Kpan Koung</div><div class="wr">Vice President</div><div class="wnote">Since 22 January 2024</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">SN</span><div><div class="wn">Sara Beysolow Nyanti</div><div class="wr">Minister of Foreign Affairs</div><div class="wnote">Dean of the Cabinet</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">AI</span><div><div class="wn">Augustine Kpehe Ngafuan II</div><div class="wr">Minister of Finance and Development Planning</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">NT</span><div><div class="wn">Cllr. N. Oswald Tweh</div><div class="wr">Minister of Justice</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">LK</span><div><div class="wn">Dr. Louise M. Kpoto</div><div class="wr">Minister of Health</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">JN</span><div><div class="wn">Dr. J. Alexander Nuetah</div><div class="wr">Minister of Agriculture</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">RT</span><div><div class="wn">R. Matenokay Tingban</div><div class="wr">Minister of Lands, Mines and Energy</div><div class="wnote">Appointed November 2025 (Wikipedia citation)</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">RG</span><div><div class="wn">Roland Lafayette Giddings</div><div class="wr">Minister of Public Works</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">GH</span><div><div class="wn">Gbeme Horace-Kollie</div><div class="wr">Minister of Gender, Children and Social Protection</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">MD</span><div><div class="wn">Magdalene Dagoseh</div><div class="wr">Minister of Commerce and Industry</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">JP</span><div><div class="wn">Jerolinmek M. Piah</div><div class="wr">Minister of Information, Culture and Tourism</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">CK</span><div><div class="wn">Cllr. Cooper W. Kruah</div><div class="wr">Minister of Labour</div><div class="wnote">Appointed 2024</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">ST</span><div><div class="wn">Sirleaf Ralph Tyler</div><div class="wr">Minister of Transport</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">CK</span><div><div class="wn">Cornelia Kruah</div><div class="wr">Minister of Youth and Sports</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">RK</span><div><div class="wn">Richard N. Koon</div><div class="wr">Speaker, House of Representatives</div><div class="wnote">Check: the legislature article still discusses a 2024 leadership dispute</div></div></div>
-        <div class="who"><span class="av" aria-hidden="true">NK</span><div><div class="wn">Nyonblee Karnga-Lawrence</div><div class="wr">President Pro Tempore, Senate</div><div class="wnote">Since 15 January 2024</div></div></div>
-        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Chief Justice</div><div class="wnote">Not in the sources checked yet</div></div></div>
-        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Education</div><div class="wnote">Not in the official list checked</div></div></div>
-        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Defence</div><div class="wnote">Not in the official list checked</div></div></div>
-        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Internal Affairs</div><div class="wnote">Not in the official list checked</div></div></div>
-        <div class="who pending"><span class="av" aria-hidden="true">?</span><div><div class="wn"><i>To confirm</i></div><div class="wr">Minister of Posts and Telecommunications</div><div class="wnote">Not in the official list checked</div></div></div>
-      </div>
+      <p class="note">From the government cabinet list (cabinet.gov.lr, updated 28 August 2026) and the legislature and office-holder records. Photographs will be added once an official, reusable portrait is confirmed for each person. Click a card for party and a short biography. Rows marked “To confirm” are not yet checked.</p>
+      <div class="who-grid" id="who-grid"></div>
+      <dialog id="who-dlg" class="who-dlg" aria-labelledby="who-dlg-h"><button type="button" id="who-dlg-x" class="who-x" aria-label="Close">Close</button><h2 id="who-dlg-h"></h2><p class="note" id="who-dlg-r"></p><p id="who-dlg-p"></p><p id="who-dlg-b"></p><p class="note"><a id="who-dlg-s" target="_blank" rel="noopener">Source</a></p></dialog>
       <p class="note">Sources: <a href="https://cabinet.gov.lr/cabinet-members/" target="_blank" rel="noopener">Cabinet of Liberia</a> · <a href="https://en.wikipedia.org/wiki/Legislature_of_Liberia" target="_blank" rel="noopener">Legislature of Liberia</a></p>
     </div>
     <div class="card">
@@ -356,9 +334,10 @@
 <script src="app.js?v=a4de0b2d"></script>
 <script src="data/maps.js?v=3d3eb78a"></script>
 <script src="data/indicators.js?v=bac30d77"></script>
-<script src="mapview.js?v=f4ac3151"></script>
+<script src="mapview.js?v=9ceca1a8"></script>
 <script src="segsel.js?v=21e4b4cb"></script>
 <script src="trade.js?v=7737a81b"></script>
+<script src="politics.js?v=0"></script>
 <script src="economy.js?v=0"></script>
 <script src="themes.js?v=103bdb84"></script>
 <script src="devind.js?v=87c1b1c8"></script>
