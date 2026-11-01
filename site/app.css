@@ -353,3 +353,10 @@ ol.ierank li { margin-bottom: 3px; break-inside: avoid; }
 .who.pending .wn i { color: var(--fg-muted); font-weight: 400; }
 ul.plain { padding-left: 1.1em; margin: 0; }
 ul.plain li { margin: 0 0 var(--gap-xs); }
+
+/* Button choices (segsel.js): a wrapping row of pills, never clipped. Active pill in the data blue. */
+.seg.seg-wrap { display: flex; flex-wrap: wrap; gap: 6px; border: 0; border-radius: 0; overflow: visible; background: none; margin: var(--gap-xs) 0 var(--gap-sm); }
+.seg.seg-wrap button { all: unset; box-sizing: border-box; cursor: pointer; padding: 6px 12px; min-height: 32px; display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--fg-muted); font-size: var(--fs-cap); line-height: 1.2; }
+.seg.seg-wrap button + button { border-left: 1px solid var(--line); }
+.seg.seg-wrap button[aria-pressed=true] { background: var(--s1); border-color: var(--s1); color: #fff; font-weight: 600; }
+.seg.seg-wrap button:focus-visible { outline: 2px solid var(--s1); outline-offset: 2px; }
