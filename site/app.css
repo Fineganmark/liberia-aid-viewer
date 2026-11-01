@@ -360,3 +360,8 @@ ul.plain li { margin: 0 0 var(--gap-xs); }
 .seg.seg-wrap button + button { border-left: 1px solid var(--line); }
 .seg.seg-wrap button[aria-pressed=true] { background: var(--s1); border-color: var(--s1); color: #fff; font-weight: 600; }
 .seg.seg-wrap button:focus-visible { outline: 2px solid var(--s1); outline-offset: 2px; }
+
+/* Grouped choices: a row of group buttons, then the items of the group chosen */
+.seg.seg-wrap .seg-row { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
+.seg.seg-wrap .seg-groups { padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.seg.seg-wrap .seg-items { padding-top: 2px; }
