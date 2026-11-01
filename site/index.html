@@ -10,14 +10,14 @@
 <link rel="icon" href="icons/icon.svg?v=9598a3cf" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png?v=c6aef258" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png?v=6c1a0ae7">
-<link rel="stylesheet" href="app.css?v=b1aef9c3">
+<link rel="stylesheet" href="app.css?v=3139bb93">
 <link rel="stylesheet" href="gate.css?v=6bd24bb6">
 <script>document.documentElement.classList.add('ia-guest');</script>
 </head>
 <body>
 <div id="root">
   <header class="mast" id="top">
-    <span class="ver" title="Viewer version">v10</span>
+    <span class="ver" title="Viewer version">v11</span>
     <div class="mast-row">
       <div>
         <h1>Liberia Assistance data viewer</h1>
@@ -35,7 +35,7 @@
     <div class="grp yrs"><span class="seg" id="ypreset" role="group" aria-label="Quick year ranges"><button type="button" data-n="1">Latest</button><button type="button" data-n="5">5 yrs</button><button type="button" data-n="0">All</button></span></div>
     <div class="grp"><span class="lab">Currency</span><span class="seg" id="cur" role="group" aria-label="Currency"><button type="button" data-c="EUR">€</button><button type="button" data-c="USD">US$</button></span></div>
     <div class="grp donor"><label class="lab" for="dsel">Donor</label><select id="dsel"></select></div>
-    <nav class="jump" id="themes" aria-label="Themes"><a href="#landing">Home</a><a href="#aid">Aid</a><a href="#trade">Trade</a><a href="#ireland">Ireland</a><a href="#census">Census</a><a href="#indicators">Indicators</a><a href="#reports">Reports &amp; news</a><a href="#about">About</a></nav>
+    <nav class="jump" id="themes" aria-label="Themes"><a href="#landing">Home</a><a href="#aid">Aid</a><a href="#trade">Trade</a><a href="#economy">Economy</a><a href="#ireland">Ireland</a><a href="#census">Census</a><a href="#indicators">Indicators</a><a href="#reports">Reports &amp; news</a><a href="#about">About</a></nav>
   </nav>
   <p class="dnote" id="dnote" hidden>Showing <b id="dnote-n"></b> only. <button type="button" id="dnote-x">Show all donors</button></p>
 
@@ -165,6 +165,26 @@
       <p class="note" id="trade-note">Loading trade figures…</p>
       <div class="chart" id="c-trade"></div>
       <div id="trade-tab"></div>
+    </div>
+  </details>
+
+  <details class="sec" id="economy" open>
+    <summary><span class="st">Economy</span><span class="sd">Growth, prices, public finances and jobs, from the World Bank and IMF, with the latest reports</span></summary>
+    <div class="card"><p class="note">Figures refreshed with the site. Last loaded <span id="econ-fetched">—</span>. Each card links to its source.</p>
+    <div class="dev-grid" id="econ-grid"></div></div>
+    <div class="card prose">
+      <h2>Latest reports and sources</h2>
+      <p class="note">Each link goes to the source’s Liberia page. Check the page for its newest publication.</p>
+      <ul class="reflist">
+        <li><a href="https://www.cbl.org.lr" target="_blank" rel="noopener">Central Bank of Liberia</a> <span>Economic reviews, exchange rates, financial stability</span></li>
+        <li><a href="https://www.imf.org/en/Countries/LBR" target="_blank" rel="noopener">IMF: Liberia</a> <span>Article IV reports, programme reviews, Regional Economic Outlook</span></li>
+        <li><a href="https://www.worldbank.org/en/country/liberia/publication/liberia-economic-update" target="_blank" rel="noopener">World Bank: Liberia Economic Update</a> <span>Published about twice a year</span></li>
+        <li><a href="https://www.lisgis.gov.lr" target="_blank" rel="noopener">LISGIS</a> <span>Census, labour force, household and price statistics</span></li>
+        <li><a href="https://mfdp.gov.lr" target="_blank" rel="noopener">Ministry of Finance and Development Planning</a> <span>Budgets and fiscal outturns</span></li>
+        <li><a href="https://www.afdb.org/en/countries/west-africa/liberia" target="_blank" rel="noopener">African Development Bank: Liberia</a> <span>Country strategy and economic outlook</span></li>
+        <li><a href="https://leiti.org" target="_blank" rel="noopener">LEITI</a> <span>Mining, forestry and oil revenues, concessions</span></li>
+        <li><a href="https://oec.world/en/profile/country/lbr" target="_blank" rel="noopener">OEC: Liberia trade</a> <span>Trade by product and partner, from UN Comtrade</span></li>
+      </ul>
     </div>
   </details>
 
@@ -302,7 +322,8 @@
 <script src="mapview.js?v=f4ac3151"></script>
 <script src="segsel.js?v=3618e710"></script>
 <script src="trade.js?v=7737a81b"></script>
-<script src="themes.js?v=b6b2f83e"></script>
+<script src="economy.js?v=0"></script>
+<script src="themes.js?v=e22f34eb"></script>
 <script src="devind.js?v=87c1b1c8"></script>
 <script src="relay.js?v=4a9d66c1"></script>
 <script src="news.js?v=05245467"></script>

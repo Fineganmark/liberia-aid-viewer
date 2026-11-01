@@ -7,6 +7,7 @@
     home: ['landing', 'news'],
     aid: ['overview', 'donors', 'sectors', 'channels', 'grants', 'iati'],
     trade: ['trade'],
+    economy: ['economy'],
     ireland: ['ireland'],
     census: ['census'],
     indicators: ['devind'],
